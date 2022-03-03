@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Connexion</title>
+
+    <link rel="stylesheet" th:href="@{../css/style.css}" media="screen"/>
+    <!--<link rel="stylesheet" href="public/css/all.css" media="screen">-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" media="screen"/>
+    <link rel="stylesheet" th:href="@{../css/bootstrap.css}" media="screen"/>
+
+    <script class="u-script" type="text/javascript" th:src="@{../js/jquery.js}" defer=""></script>
+    <script class="u-script" type="text/javascript" th:src="@{../js/bootstrap.js}" defer=""></script>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="logo"> <img src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-bird-symbols-png-logo-0.png" alt=""> </div>
+    <div class="text-center mt-4 name"> Twitter </div>
+    <form class="p-3 mt-3" th:action="@{/login}" method="post">
+        <div class="form-field d-flex align-items-center">
+            <span class="far fa-user"></span>
+            <input type="text" name="username" id="username" placeholder="Username" required/>
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="fas fa-key"></span>
+            <input type="password" name="password" id="pwd" placeholder="Password" required/>
+        </div>
+        <button class="btn mt-3">Login</button>
+    </form>
+    <div class="text-center fs-6"> <a href="#">Forget password?</a> or <a href="#">Sign up</a> </div>
+</div>
+
+</body>
+</html>
